@@ -44,7 +44,7 @@ Pod::Spec.new do |spec|
             make.size.mas_equalTo(CGSizeMake(50, 50));
         }];
     }
-  
+
                    DESC
 
   spec.homepage     = "https://github.com/ivoidcat/ScrollableStackView"
@@ -100,7 +100,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/ivoidcat/ScrollableStackView", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/ivoidcat/ScrollableStackView.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
