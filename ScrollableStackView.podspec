@@ -25,6 +25,26 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+
+    self.stackView = [[ScrollableStackView alloc] init];
+    
+    self.stackView.direction = UILayoutConstraintAxisHorizontal;
+    [self.stBgView addSubview:self.stackView];
+    self.stackView.backgroundColor = KRedColor;
+    [self.stackView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.stBgView);
+    }];
+    
+    for (int i = 0; i < 10; i++) {
+        UIView *view = [[UIView alloc] init];
+        
+        view.backgroundColor = [UIColor redColor];
+        [self.stackView addView:view];
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(50, 50));
+        }];
+    }
+  
                    DESC
 
   spec.homepage     = "https://github.com/ivoidcat/ScrollableStackView"
